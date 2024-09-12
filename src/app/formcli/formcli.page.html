@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Datos del Cliente
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="cliente.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input [(ngModel)]="cliente.apellido"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Edad</ion-label>
+    <ion-input type="number" [(ngModel)]="cliente.edad"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="enviarDatos()">Enviar</ion-button>
+  <ion-button expand="full" color="medium" (click)="regresar()">Regresar</ion-button>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Venta de Entradas © 2024</ion-title>
+  </ion-toolbar>
+</ion-footer>

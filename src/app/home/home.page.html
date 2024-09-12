@@ -1,20 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Todos los eventos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <h1 class="titulo1">Selecciona el evento que deseas!😎</h1>
+  <ion-list class="lista">
+    <ion-item *ngFor="let evento of eventos" (click)="irAFormularioCliente(evento)" class="evento-item">
+      <ion-label>
+        <h2>{{ evento.nombre }}</h2>
+        <p>Precio: ${{ evento.precio }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Venta de Entradas © 2024</ion-title>
+  </ion-toolbar>
+</ion-footer>

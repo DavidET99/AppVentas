@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalles de Compra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todo listo?🥳</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Nombre del Evento:</strong> {{ evento?.nombre }}</p>
+      <p><strong>Precio Original:</strong> ${{ evento?.precio }}</p>
+      <p><strong>Descuento Aplicado:</strong> {{ (descuento * 100) | number: '1.0-0' }}%</p>
+      <p><strong>Total a Pagar:</strong> ${{ total }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button
+    expand="full"
+    (click)="finalizarCompra()"
+    [ngClass]="{'animate-success': isSuccess}"
+    class="finalizar-compra"
+  >
+    Finalizar Compra
+  </ion-button>
+  <ion-button expand="full" color="medium" (click)="regresar()">Regresar</ion-button>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Venta de Entradas © 2024</ion-title>
+  </ion-toolbar>
+</ion-footer>

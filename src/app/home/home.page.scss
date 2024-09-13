@@ -1,5 +1,21 @@
 ion-content {
-  --ion-background-color: #f3f3f3;
+  --ion-background-color: transparent;
+  background: linear-gradient(270deg, #29ff9b, #41d6a9, #1fa387, #1a9bce, #806db3);
+  background-size: 400% 400%;
+  animation: animarFondo 15s ease infinite;
+  cursor: pointer;
+}
+
+@keyframes animarFondo {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .titulo1 {
@@ -15,16 +31,16 @@ ion-content {
 
 .evento-item {
   border: 1px solid #ccc;
-  margin-bottom: 10px;
   border-radius: 8px;
-  position: relative;
+  margin-bottom: 10px;
   padding: 15px;
-  transition: transform 0.2s ease-in-out;
   background-color: #2196F3;
   display: flex;
   align-items: center;
   width: 80%;
   max-width: 500px;
+  cursor: cell;
+  transition: transform 0.6s ease;
 }
 
 .evento-item:hover {
@@ -32,3 +48,20 @@ ion-content {
   border-color: #2196F3;
   background-color: #1976D2;
 }
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.evento-item.active {
+  animation: slide-right 0.6s ease-in-out forwards;
+}
+
+
+

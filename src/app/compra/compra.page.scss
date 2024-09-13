@@ -19,7 +19,14 @@
 }
 
 .animate-success {
-  animation: successAnimation 1s ease-in-out;
+  animation: shake 0.5s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
 }
 
 .success-toast {
@@ -29,6 +36,82 @@
   text-align: center;
   background-color: #4caf50;
   color: #fff;
+}
+
+ion-content {
+  --ion-background-color: transparent;
+  background: linear-gradient(270deg, #29ff9b, #41d6a9, #1fa387, #1a9bce, #806db3);
+  background-size: 400% 400%;
+  animation: animarFondo 15s ease infinite;
+}
+
+@keyframes animarFondo {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+ion-card {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #2196F3;
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  cursor: cell;
+}
+
+
+ion-card-header {
+  margin-bottom: 15px;
+}
+
+
+ion-card-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+}
+
+
+ion-card-content {
+  font-size: 16px;
+  color:black;
+}
+
+
+ion-button {
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+  width: 80%;
+  max-width: 400px;
+  margin-top: 15px;
+  margin-left: 75px;
+}
+
+.finalizar-compra {
+  --background: #28a745;
+  --color: #fff;
+  --border: none;
+}
+
+ion-button[color="medium"] {
+  --background: #6c757d;
+  --color: #fff;
+  --border: none;
 }
 
 

@@ -1,0 +1,39 @@
+ion-content {
+  --ion-background-color: transparent;
+  background: linear-gradient(270deg, #29ff9b, #41d6a9, #1fa387, #1a9bce, #806db3);
+  background-size: 400% 400%;
+  animation: animarFondo 15s ease infinite;
+  cursor: pointer;
+}
+
+@keyframes animarFondo {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+ion-input {
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 16px;
+  color: aliceblue;
+}
+
+ion-item {
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+
+ion-button{
+  width: 1250px;
+  height: 10px;
+  padding-left: 500px;
+}
+

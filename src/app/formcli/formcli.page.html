@@ -8,18 +8,18 @@
 
 <ion-content>
   <ion-item>
-    <ion-label position="floating">Nombre</ion-label>
-    <ion-input [(ngModel)]="cliente.nombre"></ion-input>
+    <ion-label position="floating" style="font-weight: bold; margin-left: 10px;">Nombre</ion-label>
+    <ion-input [(ngModel)]="cliente.nombre" required></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label position="floating">Apellido</ion-label>
-    <ion-input [(ngModel)]="cliente.apellido"></ion-input>
+    <ion-label position="floating" style="font-weight: bold; margin-left: 10px;">Apellido</ion-label>
+    <ion-input [(ngModel)]="cliente.apellido" required></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label position="floating">Edad</ion-label>
-    <ion-input type="number" [(ngModel)]="cliente.edad"></ion-input>
+    <ion-label position="floating" style="font-weight: bold; margin-left: 10px;">Edad</ion-label>
+    <ion-input type="number" [(ngModel)]="cliente.edad" required></ion-input>
   </ion-item>
 
   <ion-button expand="full" (click)="enviarDatos()">Enviar</ion-button>

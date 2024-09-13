@@ -9,10 +9,10 @@
 <ion-content>
   <h1 class="titulo1">Selecciona el evento que deseas!😎</h1>
   <ion-list class="lista">
-    <ion-item *ngFor="let evento of eventos" (click)="irAFormularioCliente(evento)" class="evento-item">
+    <ion-item *ngFor="let evento of eventos" (click)="irAFormularioCliente(evento, $event)" class="evento-item">
       <ion-label>
         <h2>{{ evento.nombre }}</h2>
-        <p>Precio: ${{ evento.precio }}</p>
+        <p style="color: aliceblue;">Precio: ${{ evento.precio }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
